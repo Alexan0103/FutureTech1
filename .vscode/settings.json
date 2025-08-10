@@ -1,0 +1,7 @@
+// {
+//   "files.exclude": {
+//     "**/*.css": true,        // Скрыть все CSS-файлы
+//     "**/*.css.map": true     // Скрыть все CSS Map
+//   }
+// }
+

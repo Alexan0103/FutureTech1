@@ -1,0 +1,83 @@
+@use "../helpers/index" as *;
+
+.about {
+  padding-block: fluid(120, 40);
+  background-color: var(--color-dark-10);
+
+  &-inner {
+    display: grid;
+    row-gap: fluid(100, 40);
+  }
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: rem(30) fluid(80, 20);
+    grid-template-areas:
+      "icon info"
+      "icon desc";
+    @include laptop {
+      row-gap: rem(20);
+    }
+    @include mobile {
+      row-gap: rem(4);
+      grid-template-areas:
+        "icon subtitle"
+        "title title"
+        "desc desc";
+    }
+  }
+
+  &-info {
+    display: grid;
+    row-gap: rem(16);
+
+    @include laptop {
+      row-gap: rem(10);
+    }
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__icon {
+    grid-area: icon;
+    width: fluid(150, 60);
+
+  }
+  &__title {
+    @include mobile {
+      grid-area: title;
+      margin-top: rem(20);
+    }
+    
+  }
+  &__desc {
+    @include mobile {
+      grid-area: desc;
+    }
+  }
+  &__subtitle {
+    justify-self: start;
+
+    @include mobile {
+      grid-area: subtitle;
+      align-self: center;
+    }
+  }
+  &__list{
+    display: grid;
+    padding: rem(20);
+    border-radius: rem(12);
+    background-color: var(--color-dark);
+    gap: rem(20);
+
+    @include laptop{
+      padding: rem(10);
+      border-radius: rem(10);
+      gap: rem(20);
+    }
+    @include mobile-above{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
