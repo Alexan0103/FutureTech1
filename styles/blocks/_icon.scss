@@ -23,12 +23,12 @@
 
   &--yellow--arrow {
     &::after {
-      background-image: url(../../icons/arrow-top-right_yellow.svg);
+      background-image: url(../icons/arrow-top-right_yellow.svg);
     }
   }
   &--yellow--eye {
     &::after {
-      background-image: url(../../icons/eye_yellow.svg);
+      background-image: url(../icons/eye_yellow.svg);
     }
   }
   &--footer {
@@ -42,7 +42,7 @@
   }
   &--gray-arrow-down{
     &::after {
-      background-image: url(../../icons/arrow-down_gray.svg);
+      background-image: url(../icons/arrow-down_gray.svg);
     }
   }
 }
